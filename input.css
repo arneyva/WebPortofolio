@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Circular Std';
+        src: url('../public/font/CircularStd-Bold.woff') format('woff');
+    }
+    /* Font Cyborg */
+    @font-face {
+        font-family: 'Cyborg';
+        src: url('../public/font/Cyborg Punk.ttf') format('truetype');
+    }
+
+    html {
+        font-family: 'inter';
+        color: white;
+    }
+
+    h1 {
+        font-family: 'Circular Std';
+    }
+    body {
+        background-color: #000000; /* Optional: Set background color to black */
+    }
+}
