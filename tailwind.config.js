@@ -14,6 +14,9 @@ module.exports = {
         orange: "#FF5722",
         grey: "#9E9E9E",
         abang: "#AB3135",
+        birudongker: "#112538",
+        abangtuo: "#1F1118",
+        ijotup: "#1C261A",
       },
       dropShadow: {
         myshadow: ["0px 4px 4px rgba(0, 0, 0, 0.25)"],

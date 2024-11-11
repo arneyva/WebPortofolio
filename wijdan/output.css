@@ -862,6 +862,16 @@ body {
   background-color: rgb(171 49 53 / var(--tw-bg-opacity));
 }
 
+.bg-abangtuo {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 17 24 / var(--tw-bg-opacity));
+}
+
+.bg-birudongker {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 37 56 / var(--tw-bg-opacity));
+}
+
 .bg-ungu {
   --tw-bg-opacity: 1;
   background-color: rgb(93 80 198 / var(--tw-bg-opacity));
@@ -870,6 +880,16 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-ijotup {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 38 26 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .p-10 {
