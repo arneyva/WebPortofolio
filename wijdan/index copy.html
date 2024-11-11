@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wijdan Portofolio</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="swiper.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- swiper -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- alpine -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="py-9 px-4" x-data="{navOpen:false}">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3 order-1 sm:order-2">
+                    <img src="../public/assets/logoeth.png" alt="" class="w-10">
+                    <span class="font-bold text-2xl font-circular text-grey">EtherealTech</span>
+                </div>
+                <img @click="navOpen = !navOpen" src="../public/assets/toggle.svg" alt=""
+                    class="lg:hidden order-2 sm:order-1">
+                <div class="order-2 hidden lg:block">
+                    <ul class="flex gap-16">
+                        <li><a href="" class="text-grey font-bold text-sm font-circular">Home</a></li>
+                        <li><a href="" class="text-grey font-bold text-sm font-circular opacity-50">About Me</a></li>
+                        <li><a href="" class="text-grey font-bold text-sm font-circular opacity-50">Project</a></li>
+                        <li><a href="" class="text-grey font-bold text-sm font-circular opacity-50">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="order-3 hidden sm:block">
+                    <button class="grow bg-white px-8 py-4 font-bold text-grey rounded-full text-sm">Login</button>
+                    <button class="grow bg-ungu px-8 py-4 font-bold text-white rounded-full text-sm">Sign Up</button>
+                </div> -->
+            </div>
+        </div>
+        <div x-show="navOpen" x-data="{open:false}"
+            class="z-50 fixed bottom-0 right-0 left-0 bg-abangtuo px-4 py-4  lg:hidden">
+            <ul x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90" class="flex justify-between">
+                <li><button class="flex justify-center flex-col items-center gap-1 text-ungu"><ion-icon
+                            name="home-outline" class="text-2xl"></ion-icon>
+                        <span class="text-ungu opacity-50 text-base font-bold">Home</span>
+                    </button></li>
+                <li><button class="flex justify-center flex-col items-center gap-1"><ion-icon name="albums-outline"
+                            class="text-2xl text-grey opacity-50"></ion-icon> <span
+                            class="text-grey opacity-50 text-base font-bold">Discover</span></button></li>
+                <li><button class="flex justify-center flex-col items-center gap-1"><ion-icon name="sparkles-outline"
+                            class="text-2xl text-grey opacity-50"></ion-icon> <span
+                            class="text-grey opacity-50 text-base font-bold">Special</span></button></li>
+                <li><button class="flex justify-center flex-col items-center gap-1"><ion-icon name="call-outline"
+                            class="text-2xl text-grey opacity-50"></ion-icon> <span
+                            class="text-grey opacity-50 text-base font-bold">Contact</span></button></li>
+                <li><button @click="open = !open" class="flex justify-center flex-col items-center gap-1"><ion-icon
+                            name="grid-outline" class="text-2xl text-grey opacity-50"></ion-icon> <span
+                            class="text-grey opacity-50 text-base font-bold">More</span></button></li>
+            </ul>
+            <div x-show="open" x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                class="absolute bottom-24 left-1/2 translate-x-[-50%] flex gap-4 w-3/4">
+                <button class="grow bg-white px-8 py-4 font-bold text-grey rounded-full text-sm">Login</button>
+                <button class="grow bg-ungu px-8 py-4 font-bold text-white rounded-full text-sm">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+    <!-- hero -->
+    <section>
+        <div class="container mx-auto px-4 py-4 lg:py-16">
+            <div class="grid grid-cols-12 items-center">
+                <div class="col-span-12 lg:col-span-4 order-2 lg:order-1">
+                    <div>
+                        <h1
+                            class="font-cyborg mt-4 mb-6 md:mb-[43px] md:mt-[43px] font-bold text-[20px] md:text-[30px] lg:text-[30px] text-white leading-tight text-center lg:text-start">
+                            Code,Debug,Review</h1>
+                        <p
+                            class="mb-8  md:mb-[43px] text-center lg:text-start text-grey opacity-50 text-base md:text-[18px] font-inter md:w-3/4 lg:w-full mx-auto">
+                            Amidst the impermanence of life, we chase the dream of mastering the world
+                            with programs built
+                            from lines of code, creating systems that leave a lasting impression. </p>
+                        <div class="flex flex-col md:flex-row justify-center lg:justify-start gap-6">
+                            <button
+                                class="justify-center items-center z-10 flex gap-2 py-6 px-8 bg-abang  rounded-full text-sm font-bold text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="white"
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z" />
+                                </svg></i>
+                                Contact Me
+                            </button>
+                            <button
+                                class="justify-center items-center z-10 flex gap-2 py-6 px-8 bg-white border border-[#EEEEEE] rounded-full text-sm font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 256 256">
+                                    <path fill="black"
+                                        d="m210.78 39.25l-130.25-23A16 16 0 0 0 62 29.23l-29.75 169a16 16 0 0 0 13 18.53l130.25 23a16 16 0 0 0 18.54-13l29.75-169a16 16 0 0 0-13.01-18.51m-75.28 92.31a8 8 0 0 1-7.87 6.61a8.3 8.3 0 0 1-1.4-.12l-41.5-7.33A8 8 0 0 1 87.52 115l41.48 7.29a8 8 0 0 1 6.5 9.27m47-24.18a8 8 0 0 1-7.86 6.61a7.6 7.6 0 0 1-1.41-.13l-83-14.65a8 8 0 0 1 2.79-15.76l83 14.66a8 8 0 0 1 6.51 9.27Zm5.55-31.52a8 8 0 0 1-7.87 6.61a8.4 8.4 0 0 1-1.4-.12l-83-14.66a8 8 0 1 1 2.78-15.75l83 14.65a8 8 0 0 1 6.52 9.27Z" />
+                                </svg></i>
+                                <span class="text-black">See My Resume</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8 order-1 lg:order-2">
+                    <div>
+                        <img src="../public/assets/hero.png" class="w-full" alt="">
+                    </div>
+                </div>
+                <!-- <div class="col-span-12  py-8 order-3">
+                    <div class="flex justify-center lg:justify-between gap-7 flex-wrap">
+                        <div><img src="../public/assets/mitra1.svg" class="h-5 sm:h-8" alt=""></div>
+                        <div><img src="../public/assets/mitra2.svg" class="h-5 sm:h-8" alt=""></div>
+                        <div><img src="../public/assets/mitra3.svg" class="h-5 sm:h-8" alt=""></div>
+                        <div><img src="../public/assets/mitra4.svg" class="h-5 sm:h-8" alt=""></div>
+                        <div><img src="../public/assets/mitra5.svg" class="h-5 sm:h-8" alt=""></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- carousel -->
+
+    <!-- hero2 -->
+    <section>
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12 px-4 items-center">
+                <div class="col-span-12 lg:col-span-6 py-16 lg:pt-0">
+                    <div>
+                        <img src="../public/assets/wijdan4.png" class="w-full lg:w-3/4 " alt="">
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-6">
+                    <div>
+                        <div class="text-center lg:text-start gap-4 ">
+                            <div class="gap-4 flex flex-col">
+                                <span class="text-abang font-bold text-base sm:text-2xl uppercase">About Me</span>
+                                <h1 class="font-bold sm:text-[32px] text-3xl font-circular leading-tight">
+                                    Hi, I'm Wijdan Arif</h1>
+                            </div>
+                            <p class="text-grey py-4">
+                                A Senior Full Stack Developer with over 7+ years of experience, holding a Bachelor of
+                                Information Engineering. I have successfully completed more than 200+ projects utilizing
+                                the latest technologies such as Laravel, Python, ExpressJs, NextJs, and NuxtJs. I am
+                                ready to collaborate with you!.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="py-16 overflow-x-hidden">
+        <div class="container mx-auto px-3">
+            <div class="grid grid-cols-12 items-center">
+                <div class="lg:col-span-4 col-span-12 flex flex-col gap-4">
+                    <span
+                        class="text-abang font-bold leading-tight text-center lg:text-start text-base sm:text-2xl">SERVICES</span>
+                    <h1 class="font-bold sm:text-[48px] text-3xl leading-tight text-grey text-center lg:text-start">
+                        Areas Where I Add Value</h1>
+                </div>
+                <div
+                    class="lg:col-span-8 col-span-12 flex flex-col sm:flex-row gap-5 lg:w-screen sm:w-auto lg:mt-0 sm:mt-16 mt-8">
+                    <div
+                        class="flex justify-center gap-16 flex-col items-center  w-full sm:w-[350px] rounded-[32px]  lg:p-16 p-10 bg-birudongker drop-shadow-myshadow ">
+                        <div><img src="../public/assets/services1.svg" alt=""></div>
+                        <div class="flex gap-8 flex-col">
+                            <h2 class="font-bold text-grey text-lg text-center">Web Design
+                            </h2>
+                            <p class="font-inter text-lg leading-relaxed text-grey opacity-50 text-center">Designing
+                                clean, user-friendly interfaces that capture attention and communicate effectively.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-center gap-16 flex-col items-center  w-full sm:w-[350px] rounded-[32px]  lg:p-16 p-10 bg-abangtuo drop-shadow-myshadow">
+                        <div><img src="../public/assets/services2.svg" alt=""></div>
+                        <div class="flex gap-8 flex-col">
+                            <h2 class="font-bold text-grey text-lg text-center">Fullstack Developer
+                            </h2>
+                            <p class="font-inter text-lg leading-relaxed text-grey opacity-50 text-center">Developing
+                                dynamic, end-to-end solutions that are both reliable and efficient.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-center gap-16 flex-col items-center w-full sm:w-[350px] rounded-[32px]  lg:p-16 p-10 bg-ijotup drop-shadow-myshadow">
+                        <div><img src="../public/assets/services3.svg" alt=""></div>
+                        <div class="flex gap-8 flex-col">
+                            <h2 class="font-bold text-grey text-lg text-center">Content Creator
+                            </h2>
+                            <p class="font-inter text-lg leading-relaxed text-grey opacity-50 text-center">Crafting
+                                engaging content that connects with audiences and brings ideas to life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- features -->
+    <!-- <section>
+        <div class="container mx-auto py-16">
+            <div class="grid grid-cols-12 px-4 gap-6">
+                <div class="col-span-12 lg:col-span-6 order-1 lg:order-2">
+                    <div>
+                        <img src="../public/assets/BACKGROUND.png" class="w-full" alt="">
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-6 order-2 lg:order-1">
+                    <div>
+                        <div class="text-center lg:text-start gap-4 ">
+                            <div class="gap-4 flex flex-col">
+                                <span class="text-jambon font-bold text-base sm:text-2xl uppercase">Key features</span>
+                                <h1 class="font-bold sm:text-[32px] text-3xl font-circular leading-tight">
+                                    We offer best services</h1>
+                            </div>
+                            <p class="text-grey py-4">
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                piece of classical Latin literature from 45 BC.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-5 ">
+                            <div
+                                class="grow flex justify-start gap-6 flex-col sm:flex-row items-start rounded-[32px] border lg:p-16 p-10 bg-white">
+                                <img src="../public/assets/service1.svg" alt="">
+                                <div class="mt-4">
+                                    <h1 class="font-circular font-bold text-2xl">Get discounted coupons</h1>
+                                    <span class="font-inter text-lg text-grey">Lorem Ipsum is not simply random
+                                        text</span>
+                                </div>
+                            </div>
+                            <div
+                                class="grow flex justify-start gap-6 flex-col sm:flex-row items-start rounded-[32px] border lg:p-16 p-10 bg-white">
+                                <img src="../public/assets/service2.svg" alt="">
+                                <div class="mt-4">
+                                    <h1 class="font-circular font-bold text-2xl">Get discounted coupons</h1>
+                                    <span class="font-inter text-lg text-grey">Lorem Ipsum is not simply random
+                                        text</span>
+                                </div>
+                            </div>
+                            <div
+                                class="grow flex justify-start gap-6 flex-col sm:flex-row items-start rounded-[32px] border lg:p-16 p-10 bg-white">
+                                <img src="../public/assets/service3.svg" alt="">
+                                <div class="mt-4">
+                                    <h1 class="font-circular font-bold text-2xl">Get discounted coupons</h1>
+                                    <span class="font-inter text-lg text-grey">Lorem Ipsum is not simply random
+                                        text</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- footer -->
+    <!-- coba untuk myproject carousel swiper -->
+    <section>
+        <div class="container mx-auto">
+            <!--HTML CODE-->
+            <div class="w-full relative">
+                <div class="swiper multiple-slide-carousel swiper-container relative">
+                    <div class="swiper-wrapper mb-16">
+                        <div class="swiper-slide">
+                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                                <span class="text-2xl font-semibold text-indigo-600">Slide 1 </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                                <span class="text-2xl font-semibold text-indigo-600">Slide 2 </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                                <span class="text-2xl font-semibold text-indigo-600">Slide 3 </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+                                <span class="text-2xl font-semibold text-indigo-600">Slide 4 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12">
+                        <button id="slider-button-left"
+                            class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full  hover:bg-indigo-600 !-translate-x-16"
+                            data-carousel-prev>
+                            <svg class="h-5 w-5 text-indigo-600 group-hover:text-white"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button id="slider-button-right"
+                            class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 !translate-x-16"
+                            data-carousel-next>
+                            <svg class="h-5 w-5 text-indigo-600 group-hover:text-white"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor"
+                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container mx-auto px-4 py-4 lg:py-16">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 lg:col-span-6 mb-16 lg:mr-6">
+
+                    <img src="../public/assets/logo.svg" alt="" class="mb-8">
+                    <p class="font-inter text-lg text-grey mb-8">Contrary to popular belief, Lorem Ipsum is not
+                        simply
+                        random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+                    <img src="../public/assets/sosmed.png" alt="">
+
+                </div>
+                <!-- <div class="col-span-12 lg:col-span-6 ">
+                    <div class="grid grid-cols-6 sm:grid-rows-6 gap-4">
+                        <div class="col-span-2 ">
+                            <h1 class="text-bold font-circular text-2xl mb-8">Company</h1>
+                            <div class="flex flex-row gap-8">
+                                <ul class="text-grey font-inter text-lg space-y-8">
+                                    <li>About</li>
+                                    <li>Career</li>
+                                    <li>Mobile</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-2 ">
+                            <h1 class="text-bold font-circular text-2xl mb-8">Contact</h1>
+                            <div class="flex flex-row gap-8">
+                                <ul class="text-grey font-inter text-lg space-y-8">
+                                    <li>Why Travlog?</li>
+                                    <li>Partner with us</li>
+                                    <li>FAQ's</li>
+                                    <li>Blog</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-2 ">
+                            <h1 class="text-bold font-circular text-2xl mb-8">Meet Us</h1>
+                            <div class="flex flex-row gap-8">
+                                <ul class="text-grey font-inter text-lg space-y-8">
+                                    <li>0987138163131</li>
+                                    <li>info@travlog.com</li>
+                                    <li>Borobuderdjo, Yogyakarta</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-span-12 lg:col-span-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-4">
+                        <div class="col-span-1">
+                            <h1 class="text-bold font-circular text-2xl mb-8">Company</h1>
+                            <div class="flex flex-row gap-8">
+                                <ul class="text-grey font-inter text-lg space-y-8">
+                                    <li>About</li>
+                                    <li>Career</li>
+                                    <li>Mobile</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <h1 class="text-bold font-circular text-2xl mb-8">Contact</h1>
+                            <div class="flex flex-row gap-8">
+                                <ul class="text-grey font-inter text-lg space-y-8">
+                                    <li>Why Travlog?</li>
+                                    <li>Partner with us</li>
+                                    <li>FAQ's</li>
+                                    <li>Blog</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <h1 class="text-bold font-circular text-2xl mb-8">Meet Us</h1>
+                            <div class="flex flex-row gap-8">
+                                <ul class="text-grey font-inter text-lg space-y-8">
+                                    <li>0987138163131</li>
+                                    <li>info@travlog.com</li>
+                                    <li>Borobuderdjo, Yogyakarta</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        var swiper = new Swiper(".multiple-slide-carousel", {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".multiple-slide-carousel .swiper-button-next",
+                prevEl: ".multiple-slide-carousel .swiper-button-prev",
+            },
+            breakpoints: {
+                1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                1028: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                990: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
