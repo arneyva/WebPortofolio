@@ -37,7 +37,7 @@
 <body>
     <!-- nav -->
     <nav class="py-9 px-4" x-data="{navOpen:false}">
-        <div class="container mx-auto">
+        <div class="container max-w-screen-xl mx-auto">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-3 order-1 sm:order-2">
                     <img src="../public/assets/logoeth.png" alt="" class="w-10">
@@ -93,7 +93,7 @@
     </nav>
     <!-- hero -->
     <section>
-        <div class="container mx-auto px-4 py-4 lg:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4 py-4 lg:pb-16">
             <div class="grid grid-cols-12 items-center">
                 <div class="col-span-12 lg:col-span-4 order-2 lg:order-1">
                     <div>
@@ -145,8 +145,8 @@
     </section>
     <!-- aboutme -->
     <section>
-        <div class="container mx-auto">
-            <div class="grid grid-cols-12 px-4 items-center">
+        <div class="container max-w-screen-xl mx-auto px-4 py-4 lg:p-16">
+            <div class="grid grid-cols-12 items-center">
                 <div class="col-span-12 lg:col-span-6 py-16 lg:pt-0">
                     <div>
                         <img src="../public/assets/wijdan4.png" class="w-full lg:w-3/4 " alt="">
@@ -175,8 +175,8 @@
         </div>
     </section>
     <!-- services -->
-    <section class="">
-        <div class="container mx-auto px-3">
+    <section>
+        <div class="container max-w-screen-xl mx-auto px-4 py-4 lg:py-16">
             <div class="grid grid-cols-12 items-center">
                 <div class="lg:col-span-4 col-span-12 flex flex-col gap-4">
                     <span
@@ -192,7 +192,7 @@
                         <div class="flex gap-8 flex-col">
                             <h2 class="font-bold text-grey text-lg text-center">Web Design
                             </h2>
-                            <p class="font-inter text-lg leading-relaxed text-grey opacity-50 text-center">Designing
+                            <p class="font-inter text-md leading-relaxed text-grey opacity-50 text-center">Designing
                                 clean, user-friendly interfaces that capture attention and communicate effectively.</p>
                         </div>
                     </div>
@@ -222,45 +222,153 @@
     </section>
     <!-- project -->
     <section>
-        <div class="container mx-auto px-4 py-4 lg:py-16">
-            <div class="mb-5">
-                <span
-                    class="text-abang font-bold leading-tight text-center lg:text-start text-base sm:text-2xl uppercase">Projects</span>
-                <h1 class="font-bold sm:text-[48px] text-3xl leading-tight text-grey text-center lg:text-start">
+        <div class="container max-w-screen-xl mx-auto px-4 py-4 lg:py-16">
+            <div class="text-center gap-4 mb-10">
+                <span class="text-abang font-bold leading-tight  text-base sm:text-2xl uppercase">Projects</span>
+                <h1 class="font-bold sm:text-[48px] text-3xl leading-tight text-grey">
                     Explore My Projects</h1>
             </div>
-            <!--HTML CODE-->
             <div class="w-full relative">
                 <div class="swiper multiple-slide-carousel swiper-container relative">
                     <div class="swiper-wrapper mb-16">
                         <div class="swiper-slide">
-                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-                                <img src="../public/assets/hero.png" alt="">
+                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                                <div class="p-5 flex flex-col">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <img src="../public/assets/dashboard.png" alt="">
+                                    </div>
+                                    <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                                    <p class="text-grey opacity-50 mt-2">This web application, developed using Laravel,
+                                        MySQL, and Bootstrap, is designed for seamless and responsive user interactions.
+                                        Integrated with the Midtrans payment gateway, it offers a secure and reliable
+                                        payment experience, supporting both traditional and QR code-based transactions.
+                                    </p>
+                                    <a href=""
+                                        class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-                                <img src="../public/assets/hero.png" alt="">
+                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                                <div class="p-5 flex flex-col">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <img src="../public/assets/dashboard.png" alt="">
+                                    </div>
+                                    <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                                    <p class="text-grey opacity-50 mt-2">This web application, developed using Laravel,
+                                        MySQL, and Bootstrap, is designed for seamless and responsive user interactions.
+                                        Integrated with the Midtrans payment gateway, it offers a secure and reliable
+                                        payment experience, supporting both traditional and QR code-based transactions.
+                                    </p>
+                                    <a href=""
+                                        class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-                                <span class="text-2xl font-semibold text-indigo-600">Slide 3 </span>
+                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                                <div class="p-5 flex flex-col">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <img src="../public/assets/dashboard.png" alt="">
+                                    </div>
+                                    <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                                    <p class="text-grey opacity-50 mt-2">This web application, developed using Laravel,
+                                        MySQL, and Bootstrap, is designed for seamless and responsive user interactions.
+                                        Integrated with the Midtrans payment gateway, it offers a secure and reliable
+                                        payment experience, supporting both traditional and QR code-based transactions.
+                                    </p>
+                                    <a href=""
+                                        class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-                                <span class="text-2xl font-semibold text-indigo-600">Slide 4 </span>
+                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                                <div class="p-5 flex flex-col">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <img src="../public/assets/dashboard.png" alt="">
+                                    </div>
+                                    <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                                    <p class="text-grey opacity-50 mt-2">This web application, developed using Laravel,
+                                        MySQL, and Bootstrap, is designed for seamless and responsive user interactions.
+                                        Integrated with the Midtrans payment gateway, it offers a secure and reliable
+                                        payment experience, supporting both traditional and QR code-based transactions.
+                                    </p>
+                                    <a href=""
+                                        class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Pagination -->
                     <div class="swiper-pagination">
-
                     </div>
                 </div>
             </div>
     </section>
+    <!-- <section>
+        <div class="container max-w-screen-xl mx-auto px-4 py-4 lg:py-16">
+            <div class="grid grid-cols-12 items-center">
+                <div
+                    class="lg:col-span-12 sm:col-span-1 flex flex-col sm:flex-row gap-5 lg:w-auto sm:w-auto lg:mt-0 sm:mt-16 mt-8">
+                    <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                        <div class="p-5 flex flex-col">
+                            <div class="rounded-xl overflow-hidden">
+                                <img src="../public/assets/dashboard.png" alt="">
+                            </div>
+                            <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                            <p class="text-grey opacity-50 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Suscipit, ad
+                                ullam
+                                voluptatibus dolore
+                                aliquam, odit natus quasi eveniet tenetur nobis cum, molestiae perspiciatis fuga quas
+                                alias
+                                inventore quis pariatur iure.</p>
+                            <a href=""
+                                class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                        </div>
+                    </div>
+                    <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                        <div class="p-5 flex flex-col">
+                            <div class="rounded-xl overflow-hidden">
+                                <img src="../public/assets/dashboard.png" alt="">
+                            </div>
+                            <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                            <p class="text-grey opacity-50 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Suscipit, ad
+                                ullam
+                                voluptatibus dolore
+                                aliquam, odit natus quasi eveniet tenetur nobis cum, molestiae perspiciatis fuga quas
+                                alias
+                                inventore quis pariatur iure.</p>
+                            <a href=""
+                                class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                        </div>
+                    </div>
+                    <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                        <div class="p-5 flex flex-col">
+                            <div class="rounded-xl overflow-hidden">
+                                <img src="../public/assets/dashboard.png" alt="">
+                            </div>
+                            <h5 class="text-2xl font-bold text-white mt-5">Fullstack Point of Sales System</h5>
+                            <p class="text-grey opacity-50 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Suscipit, ad
+                                ullam
+                                voluptatibus dolore
+                                aliquam, odit natus quasi eveniet tenetur nobis cum, molestiae perspiciatis fuga quas
+                                alias
+                                inventore quis pariatur iure.</p>
+                            <a href=""
+                                class="text-center bg-white py-2 rounded-lg text-black mt-5 font-circular">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
     <!-- footer -->
     <section>
         <div class="container mx-auto px-4 py-4 lg:py-16">
@@ -390,10 +498,10 @@
                 }
 
             },
-            // autoplay: {
-            //     delay: 3000, // Durasi antar-slide dalam milidetik (3000 ms = 3 detik)
-            //     disableOnInteraction: false, // Tetap bergerak otomatis meskipun ada interaksi
-            // },
+            autoplay: {
+                delay: 3000, // Durasi antar-slide dalam milidetik (3000 ms = 3 detik)
+                disableOnInteraction: false, // Tetap bergerak otomatis meskipun ada interaksi
+            },
         });
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
