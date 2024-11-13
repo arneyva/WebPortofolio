@@ -31,6 +31,7 @@
         .swiper-pagination-bullet {
             background: #AB3135;
         }
+        
     </style>
 </head>
 
@@ -115,14 +116,14 @@
                                 </svg></i>
                                 Contact Me
                             </button>
-                            <button
+                            <!-- <button
                                 class="justify-center items-center z-10 flex gap-2 py-6 px-8 bg-white border border-[#EEEEEE] rounded-full text-sm font-bold">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 256 256">
                                     <path fill="black"
                                         d="m210.78 39.25l-130.25-23A16 16 0 0 0 62 29.23l-29.75 169a16 16 0 0 0 13 18.53l130.25 23a16 16 0 0 0 18.54-13l29.75-169a16 16 0 0 0-13.01-18.51m-75.28 92.31a8 8 0 0 1-7.87 6.61a8.3 8.3 0 0 1-1.4-.12l-41.5-7.33A8 8 0 0 1 87.52 115l41.48 7.29a8 8 0 0 1 6.5 9.27m47-24.18a8 8 0 0 1-7.86 6.61a7.6 7.6 0 0 1-1.41-.13l-83-14.65a8 8 0 0 1 2.79-15.76l83 14.66a8 8 0 0 1 6.51 9.27Zm5.55-31.52a8 8 0 0 1-7.87 6.61a8.4 8.4 0 0 1-1.4-.12l-83-14.66a8 8 0 1 1 2.78-15.75l83 14.65a8 8 0 0 1 6.52 9.27Z" />
                                 </svg></i>
                                 <span class="text-black">See My Resume</span>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -232,7 +233,7 @@
                 <div class="swiper multiple-slide-carousel swiper-container relative">
                     <div class="swiper-wrapper mb-16">
                         <div class="swiper-slide">
-                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                            <div class="rounded-xl shadow-lg bg-birudongker">
                                 <div class="p-5 flex flex-col">
                                     <div class="rounded-xl overflow-hidden">
                                         <img src="../public/assets/dashboard.png" alt="">
@@ -249,7 +250,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                            <div class="rounded-xl shadow-lg bg-birudongker">
                                 <div class="p-5 flex flex-col">
                                     <div class="rounded-xl overflow-hidden">
                                         <img src="../public/assets/dashboard.png" alt="">
@@ -266,7 +267,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                            <div class="rounded-xl shadow-lg bg-birudongker">
                                 <div class="p-5 flex flex-col">
                                     <div class="rounded-xl overflow-hidden">
                                         <img src="../public/assets/dashboard.png" alt="">
@@ -283,7 +284,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="rounded-xl shadow-lg bg-birudongker w-[350px]">
+                            <div class="rounded-xl shadow-lg bg-birudongker">
                                 <div class="p-5 flex flex-col">
                                     <div class="rounded-xl overflow-hidden">
                                         <img src="../public/assets/dashboard.png" alt="">
@@ -371,15 +372,17 @@
 
     <!-- footer -->
     <section>
-        <div class="container mx-auto px-4 py-4 lg:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4 py-4 lg:py-16">
             <div class="grid grid-cols-12">
                 <div class="col-span-12 lg:col-span-6 mb-16 lg:mr-6">
-
-                    <img src="../public/assets/logo.svg" alt="" class="mb-8">
-                    <p class="font-inter text-lg text-grey mb-8">Contrary to popular belief, Lorem Ipsum is not
-                        simply
-                        random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
-                    <img src="../public/assets/sosmed.png" alt="">
+                    <div class="flex items-center gap-3 order-1 sm:order-2 mb-4">
+                        <img src="../public/assets/logoeth.png" alt="" class="w-10">
+                        <span class="font-bold text-2xl font-circular text-grey">EtherealTech</span>
+                    </div>
+                    <p class="font-inter text-lg text-grey mb-8">
+                        Interested in working together? Let’s create something amazing! Feel free to reach out, and
+                        let’s discuss how we can make an impact together.</p>
+                    <!-- <img src="../public/assets/sosmed.png" alt=""> -->
 
                 </div>
                 <!-- <div class="col-span-12 lg:col-span-6 ">
@@ -462,6 +465,7 @@
             effect: "coverflow",
             slidesPerView: 3,
             spaceBetween: 20,
+            centeredSlides: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -480,17 +484,9 @@
                     slidesPerView: 3,
                     spaceBetween: 30
                 },
-                1024: { // Tailwind lg
-                    slidesPerView: 3,
-                    spaceBetween: 20
-                },
                 768: { // Tailwind md
                     slidesPerView: 3,
                     spaceBetween: 10
-                },
-                640: { // Tailwind sm
-                    slidesPerView: 1,
-                    spaceBetween: 0
                 },
                 0: { // Tailwind sm
                     slidesPerView: 1,
